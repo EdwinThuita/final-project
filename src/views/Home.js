@@ -9,10 +9,10 @@ function Home() {
 
   function handleChange(e){
     setAllMovies(
-      movies.filter(movie => movie.completion_status.includes(e.target.value)).map((movie) => (
+      tasks.filter(movie => movie.year.includes(e.target.value)).map((movie) => (
           <div class="card" style={{width: "18rem"}}>
             <div class="card-body" >
-              <h5 class="card-title">{movie.name}</h5>
+              <h5 class="card-title">{movie.title}</h5>
               <h6 class="card-subtitle mb-2 text-muted">{movie.status}</h6>
               <p class="card-text">{movie.description}</p>
               <Link to={`/moviedetails/${movie.id}`} class="card-link">more details</Link>
@@ -21,27 +21,27 @@ function Home() {
       )))
   }
 
-  const [tasks, setTasks] = useState([])
-  const [allTasks, setAllTasks] = useState([])
+  const [Movies, setMovies] = useState([])
+  const [allMovies, setAllMovies] = useState([])
 
   const user_id = localStorage.getItem('user_id')
 
 
 
 useEffect(() =>{
-  fetch(`http://localhost:9292/user/tasks/${user_id}`)
+  fetch(`http://localhost:9292/user/movies/${user_id}`)
   .then(response => response.json())
-  .then((tasks) => {
-    console.log(tasks)
-    setTasks(tasks)
-    setAllTasks(
-    tasks.map((task) => (
+  .then((movies) => {
+    console.log(movies)
+    setMovies(movies)
+    setAllMovies(
+    movies.map((movie) => (
         <div class="card" style={{width: "18rem"}}>
           <div class="card-body" >
-            <h5 class="card-title">{task.name}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{task.status}</h6>
-            <p class="card-text">{task.description}</p>
-            <Link to={`/taskdetails/${task.id}`} class="card-link">more details</Link>
+            <h5 class="card-title">{movie.title}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{movie.status}</h6>
+            <p class="card-text">{movie.description}</p>
+            <Link to={`/moviedetails/${movie.id}`} class="card-link">more details</Link>
           </div>
         </div>
     )))
@@ -57,7 +57,7 @@ useEffect(() =>{
         <option value="On hold">On hold</option>
       </select>
       </div>
-      {allTasks}
+      {allMovies}
     </div>
   )
 }

@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+Introduction:
+Movie Finder App:
+This is an app that allows the user to register and login and add a new movie among other functionalities such as:
+User can view all the added movies.
+User can view all the available movies.
+A user can search a movie through title or year.
+A user can be able to update details of the movie they have added.
+A user can be able to remove details of the movie they have added.
+A user can not update or delete movies they have not added.
+A user has to be logged in to use the application.
+Created Using:
+This is an app that has been created using:
+React: For Front end and User Interface (UI)
+Ruby- Sinatra- Gem- For backend and server interaction
+Steps followed to complete the application:
+Designed the UI: Before starting the development, I first planned out the user interface (UI) of my application. I Sketched out a few designs to get an idea of how I wanted the app to look and function.
+Set up the backend: I then Began setting up the backend server using Sinatra. This is a lightweight web framework written in Ruby. I used a tool called Bundler to manage my application's dependencies.
+Create APIs: The backend of my application needed to expose a few endpoints (APIs) that can be used by the frontend. For example, I needed to create an API that allowed the user to search for movies based on a user's query. I used a Ruby libraries known JSON to make HTTP requests to external movie databases (e.g. IMDb) and parse the JSON response.
+Set up the frontend: Next, I set up my React project using create-react-app. This gave me a basic React application with a development server and a few other useful tools.
+Create components: In React, I created reusable UI components that can be used throughout my application. For example, I created a MovieCard component that displayed information about a single movie (e.g. title, poster image, rating, etc.).
+Connect to the backend: Using the fetch API or a library like axios, I made requests to my backend API endpoints and retrieved data. I then updated my React components with the retrieved data.
+Build the search functionality: Finally, I implemented the search functionality in my application. When a user enters a search query, he/she can make a request to my backend API and retrieve a list of movies that match the query. The results are displayed in the search results to the user in a list or grid view.
+Running the application:
+The best way to use the application is on a web browser, by following these simple steps:
+Click on the deployed link: https://movie-finder-six-delta.vercel.app/
+Testing the functionalities of the application:
+Try out each of the following functions:
+User can view all the added movies.
+User can view all the available movies.
+A user can search a movie through title or year.
+A user can be able to update details of the movie they have added.
+A user can be able to remove details of the movie they have added.
+A user can not update or delete movies they have not added.
+A user has to be logged in to use the application.
+Congratulations, you have successfully tested out the application.
+Conclusion:
+I have successfully made an application that involves the front end and the backend and is able to perform CRUD operations. For more information about how the backend operates, please visit this link:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+License:
+Apache 2.0
+movie-finder-six-delta.vercel.appmovie-finder-six-delta.vercel.app
+React App
+Web site created using create-react-app
+1:11
+Above readme for my front end
+1:11
+Introduction
+my-sinatra-app
+In the app above, we require the sinatra and json libraries. We also define a function search_movies that takes a query and returns an array of movie data.
+Function
+We define two routes: a root route that just displays a welcome message, and a /movies/search route that takes a query parameter and returns JSON data of movies that match the query.
+Running the app:
+To run the app, we simply run ruby app.rb in the terminal, and then visit http://localhost:4567 in our browser to see the welcome message.
+To search for movies, visit http://localhost:4567/movies/search/ in your browser, replacing with your actual search query.
+Conclusion:
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+Apache 2.0
+1:12
+Above the readme for my sinatra back end app
