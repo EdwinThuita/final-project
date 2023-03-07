@@ -11,7 +11,12 @@ function MovieDetails({user_id}) {
       headers:
         {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        completion_status:  "Completed"
+       title:"conan",
+       description:"description",
+       available: "available",
+       year:"year",
+       image:"https://images.unsplash.com/photo-1585951237318-9ea5e175b891?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vdmllfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+
       })
     })
     .then(response => response.json())
