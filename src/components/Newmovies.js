@@ -6,11 +6,10 @@ function NewMovie() {
 
       // declaring state 
       const [isClicked, setIsClicked] = useState({
-        name:"",
+        title:"",
         description:"",
-        completion_status:"",
-        date:"",
-        due_date:"",
+        year:"",
+        status:"",
         user_id:user_id
     })
     // function that handles the change in the inputs
@@ -27,7 +26,7 @@ function NewMovie() {
         e.preventDefault()
 
         // creates the post when the data is added it adds the data to the backend ie ..db.json
-        fetch("http://localhost:9292/Movies",{
+        fetch("http://localhost:9292/movies",{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,29 +45,21 @@ function NewMovie() {
 
   return (
     <div>
-        <form  className='new_Movie' onSubmit={handleSubmit}>
-            <label>Name</label> <br />
-            <input type="text" placeholder='Name' name = "name" onChange={handleChange}/><br />
+        <form  className='new_task' onSubmit={handleSubmit}>
+            <label>Title</label> <br />
+            <input type="text" placeholder='Name' name = "title" onChange={handleChange}/><br />
             <label>Description</label> <br />
             <input type="text" placeholder='Description' name = "description" onChange={handleChange}/><br />
             <label>Status</label><br />
             <input type="text" placeholder='Status' name = "status" onChange={handleChange}/><br />
-            <label>Date</label><br />
-            <input type="text" placeholder='Date' name = "date" onChange={handleChange}/><br />
+            <label>Year</label><br />
+            <input type="text" placeholder='Date' name = "year" onChange={handleChange}/><br />
             <label>Due Date</label><br />
             <input type="text" placeholder='Due Date' name = "due_date" /><br />
-            <button >Add Movie</button>
+            <button >Add Task</button>
         </form>
     </div>
   )
 }
 
 export default NewMovie
-
-
-// name
-// description
-// completion_status
-// date
-// due_date
-// user_id

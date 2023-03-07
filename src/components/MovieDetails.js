@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-function TaskDetails({user_id}) {
-  const {taskId} = useParams()
-  const [task, setTask] = useState()
+function MovieDetails({user_id}) {
+  const {movieId} = useParams()
+  const [movies, setMovie] = useState()
 
   function handleClick(e) {
-    fetch(`http://localhost:9292/tasks/${taskId}`,{
+    fetch(`http://localhost:9292/movies/${movieId}`,{
       method: 'PATCH',
       headers:
         {'Content-Type': 'application/json'},
@@ -15,15 +15,15 @@ function TaskDetails({user_id}) {
       })
     })
     .then(response => response.json())
-    .then((task) => {
-      setTask(
+    .then((movie) => {
+      setMovie(
         <div class="card">
           <div class="card-body">
-              {task.name} <br />
-              {task.description} <br />
-              {task.completion_status} <br />
-              {task.date} <br />
-              {task.due_date}
+              {movie.name} <br />
+              {movie.description} <br />
+              {movie.completion_status} <br />
+              {movie.date} <br />
+              {movie.due_date}
             <button onClick={handleClick}>Update</button>
           </div>
         </div>
@@ -31,18 +31,18 @@ function TaskDetails({user_id}) {
     })
   }
   useEffect(() =>{
-    fetch(`http://localhost:9292/tasks/${taskId}`)
+    fetch(`http://localhost:9292/movies/${movieId}`)
     .then(response => response.json())
-    .then((task) => {
-      console.log(task)
-      setTask(
+    .then((movie) => {
+      console.log(movie)
+      setMovie(
         <div class="card">
           <div class="card-body">
-              <h1>{task.name} </h1><br />
-              {task.description} <br />
-              {task.completion_status} <br />
-              {task.date} <br />
-              {task.due_date}
+              <h1>{movie.name} </h1><br />
+              {movie.description} <br />
+              {movie.completion_status} <br />
+              {movie.date} <br />
+              {movie.due_date}
             <button onClick={handleClick}>Update</button>
           </div>
         </div>
@@ -52,9 +52,9 @@ function TaskDetails({user_id}) {
 
   return (
     <div>
-      {task}
+      {movies}
     </div>
   )
 }
 
-export default TaskDetails
+export default MovieDetails

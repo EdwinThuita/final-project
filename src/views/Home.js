@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from '../components/NavBar'
-import Task from '../components/Task'
-import TaskDetails from '../components/TaskDetails'
+import Movie from '../components/Movie'
+import MovieDetails from '../components/MovieDetails'
 
 
 function Home() {
 
   function handleChange(e){
-    setAllTasks(
-      tasks.filter(task => task.completion_status.includes(e.target.value)).map((task) => (
+    setAllMovies(
+      movies.filter(movie => movie.completion_status.includes(e.target.value)).map((movie) => (
           <div class="card" style={{width: "18rem"}}>
             <div class="card-body" >
-              <h5 class="card-title">{task.name}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{task.status}</h6>
-              <p class="card-text">{task.description}</p>
-              <Link to={`/taskdetails/${task.id}`} class="card-link">more details</Link>
+              <h5 class="card-title">{movie.name}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{movie.status}</h6>
+              <p class="card-text">{movie.description}</p>
+              <Link to={`/moviedetails/${movie.id}`} class="card-link">more details</Link>
             </div>
           </div>
       )))

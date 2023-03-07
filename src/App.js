@@ -4,7 +4,7 @@ import Home from './views/Home';
 import NavBar from './components/NavBar';
 import { useEffect, useState } from 'react';
 import Login from './components/Login';
-import NewMovie from './components/NewMovie';
+import Newmovies from './components/Newmovies';
 import MovieDetails from './components/MovieDetails';
 
 
@@ -27,7 +27,7 @@ console.log(user)
         <Route exact path = '/' element = {<Home user = {user} />}/>
         <Route exact path = '/Movies' element = {<Movie/>}/>
         <Route exact path = '/login' element = {<Login setUser = {setUser}/>} />
-        <Route exact path = '/newMovies' element = {<NewMovie />}/> 
+        <Route exact path = '/newMovies' element = {<NewMovies />}/> 
         <Route exact path = '/Moviedetails/:MovieId' element = {<MovieDetails />}/>
       </Routes>
     </div>
