@@ -9,12 +9,13 @@ function Home() {
 
   function handleChange(e){
     setAllMovies(
-      tasks.filter(movie => movie.year.includes(e.target.value)).map((movie) => (
+      Movies.filter(movie => movie.year.includes(e.target.value)).map((movie) => (
           <div class="card" style={{width: "18rem"}}>
             <div class="card-body" >
               <h5 class="card-title">{movie.title}</h5>
               <h6 class="card-subtitle mb-2 text-muted">{movie.status}</h6>
               <p class="card-text">{movie.description}</p>
+              <img src={movie.image} alt="loading" />
               <Link to={`/moviedetails/${movie.id}`} class="card-link">more details</Link>
             </div>
           </div>
@@ -29,7 +30,7 @@ function Home() {
 
 
 useEffect(() =>{
-  fetch(`http://localhost:9292/user/movies/${user_id}`)
+  fetch(`http://localhost:9292/`)
   .then(response => response.json())
   .then((movies) => {
     console.log(movies)
