@@ -16,7 +16,7 @@ function NavBar({setUser}) {
     navigate("movies")
   }
   function NewMovie() {
-    navigate("/newmovie")
+    navigate("/newmovies")
   }
 
   return (
@@ -30,7 +30,7 @@ function NavBar({setUser}) {
     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" onClick={Today}>Movies</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onClick={NewMovie}>New Movies</button>
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onClick={NewMovie}>AddNewMovies</button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" onClick={onclick}>LogOut</button>
