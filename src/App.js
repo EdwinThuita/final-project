@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Login from './components/Login';
 import NewMovie from './components/Newmovies';
 import MovieDetails from './components/MovieDetails';
-
+import UpdateMovie from './components/update';
 
 function App() {
 
@@ -25,7 +25,7 @@ console.log(user)
       <NavBar setUser={setUser} />
       <Routes>
         <Route exact path = '/' element = {<Home user = {user} />}/>
-        <Route exact path = '/movies' element = {<Movie/>}/>
+        <Route exact path = '/updatemovies' element = {<UpdateMovie/>}/>
         <Route exact path = '/login' element = {<Login setUser = {setUser}/>} />
         <Route exact path = '/newmovies' element = {<NewMovie />}/> 
         <Route exact path = '/moviedetails/:movieId' element = {<MovieDetails />}/>
