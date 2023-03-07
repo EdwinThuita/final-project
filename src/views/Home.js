@@ -9,7 +9,7 @@ function Home() {
 
   function handleChange(e){
     setAllMovies(
-      Movies.filter(movie => movie.year.includes(e.target.value)).map((movie) => (
+      Movies.filter(movie => movie.available.includes(e.target.value)).map((movie) => (
           <div class="card" style={{width: "18rem"}}>
             <div class="card-body" >
               <h5 class="card-title">{movie.title}</h5>
@@ -42,6 +42,7 @@ useEffect(() =>{
             <h5 class="card-title">{movie.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{movie.status}</h6>
             <p class="card-text">{movie.description}</p>
+            <img src={movie.image} alt="loading" />
             <Link to={`/moviedetails/${movie.id}`} class="card-link">more details</Link>
           </div>
         </div>
@@ -52,10 +53,10 @@ useEffect(() =>{
     <div>
       <div>
       <select onChange={handleChange}>
-        <option value="">- -</option>
-        <option value="Complete">Completed</option>
-        <option value="In progress">In progress</option>
-        <option value="On hold">On hold</option>
+        <option value="">select</option>
+        <option value="available">available</option>
+        <option value="not released">not released</option>
+        <option value="fully booked">fully booked</option>
       </select>
       </div>
       {allMovies}
