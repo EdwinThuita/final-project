@@ -45,7 +45,7 @@ function NewMovie() {
 
   return (
     <div>
-        <form  className='new_task' onSubmit={handleSubmit}>
+        <form  className='new_movie' onSubmit={handleSubmit}>
             <label>Title</label> <br />
             <input type="text" placeholder='Name' name = "title" onChange={handleChange}/><br />
             <label>Description</label> <br />
