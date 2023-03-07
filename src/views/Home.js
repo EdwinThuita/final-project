@@ -59,6 +59,10 @@ useEffect(() =>{
         <option value="fully booked">fully booked</option>
       </select>
       </div>
+      <div>
+      <input type="text"placeholder='Search' />
+      <button>Search</button>
+      </div>
       {allMovies}
     </div>
   )
