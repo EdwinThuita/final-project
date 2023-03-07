@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 function MovieDetails({user_id}) {
   const {movieId} = useParams()
   const [movies, setMovie] = useState()
+  
 
   function handleClick(e) {
     fetch(`http://localhost:9292/movies/${movieId}`,{
@@ -49,6 +50,7 @@ function MovieDetails({user_id}) {
               {movie.date} <br />
               {movie.due_date}
             <button onClick={handleClick}>Update</button>
+            <button>Delete</button>
           </div>
         </div>
       )
